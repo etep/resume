@@ -1,6 +1,9 @@
 % resume.tex
 % vim:set ft=tex spell:
-
+%
+% garamond lives here (or did so as of this writing):
+% ... http://www.ctan.org/tex-archive/fonts/garamondx
+%
 \documentclass[10pt,letterpaper]{article}
 \usepackage[letterpaper,margin=0.75in]{geometry}
 \usepackage[utf8]{inputenc}
@@ -8,6 +11,10 @@
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{tgpagella}
+\usepackage{lmodern}
+\usepackage{garamondx}
+%\renewcommand{\familydefault}{\sfdefault}
+
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 
@@ -43,14 +50,10 @@
 \begin{document}
 
 \begin{center}
-{\LARGE \textbf{John Q. Example}}
-
-151 E Wacker Drive\ \ \textbullet
-\ \ Suite\ 1001\ \ \textbullet
-\ \ Chicago, IL 60606
-\\
-(312) 555-1212\ \ \textbullet
-\ \ test@example.com
+{\LARGE{\scshape \textbf{John Peter Stevenson}}} \\
+\vspace{0.5em}
+161 S. California Ave., \#K200\ \ \textbullet\ \ Palo Alto, CA 94306 \\
+(640) 906-9549\ \ \textbullet \ \ etep.nosnevets@gmail.com
 \end{center}
 
 \hrule
@@ -69,14 +72,10 @@
 		{\emph{Software Developer \& Project Manager}}
 		{\emph{2004 -- 2010}}
 	\begin{itemize*}
+		\item { Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+		erat volutpat.}
 		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-		diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
 		erat volutpat.
-		\item Duis splople autem vel eum iriure dolor in hendrerit in vulputate
-		velit esse molestie consequat, vel illum dolore eu feugiat nulla
-		facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-		praesent luptatum zzril delenit augue duis dolore te feugait nulla
-		facilisi.
 		\item Nam liber tempor cum soluta nobis eleifend option congue nihil
 		imperdiet doming id quod mazim placerat facer possim assum. Typi non
 		habent claritatem insitam; est usus legentis in iis qui facit eorum

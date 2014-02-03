@@ -21,9 +21,9 @@ html: clean $(HTML)
 
 %.pdf: %.tex #$(BIBFILE) # %.blg %.toc $(TEXFILES)
 	pdflatex -interaction=nonstopmode $*.tex
-	# bibtex $*
 	pdflatex -interaction=nonstopmode $*.tex
-	pdflatex -interaction=nonstopmode $*.tex
+	#pdflatex -interaction=nonstopmode $*.tex
+	#pdflatex -interaction=nonstopmode $*.tex
 	\rm -rf *.dvi *.aux *.ps *~ *.log *.out *.lot *.lof *.toc *.blg *.bbl url.sty nain.cb nain.cb2
 
 %.ps: %.tex $(BIBFILE) # %.blg %.toc $(TEXFILES)
