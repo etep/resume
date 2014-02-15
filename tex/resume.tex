@@ -35,6 +35,46 @@
 }
 {\end{list}}
 
+\newenvironment{changemargin}[2]
+{%
+    \begin{list}{}{%
+        \setlength{\topsep}{0pt}%
+        \setlength{\leftmargin}{#1}%
+        \setlength{\rightmargin}{#2}%
+        \setlength{\listparindent}{\parindent}%
+        \setlength{\itemindent}{\parindent}%
+        \setlength{\parsep}{\parskip}%
+    }%
+    \item[]
+}%
+{%
+    \end{list}
+}%
+
+% content underneath an educational instution, or workplace
+\newenvironment{content}
+{%
+    \begin{changemargin}{0cm}{2.5cm}
+    \begin{itemize*}
+        \vspace{-0.15em}
+}%
+{%
+    \end{itemize*}
+    \end{changemargin}
+}%
+
+\newenvironment{resumesection}[1]
+{%
+    \subsection*{\ #1}
+    \vspace{-0.4em}
+    \hrule
+    \vspace{+0.4em}
+    \begin{itemize}
+        \parskip=0.1em
+}%
+{%
+    \end{itemize}
+}%
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
@@ -42,25 +82,62 @@
 	#2 \\
 \end{tabular*}}
 
+\newcommand{\headerrowx}[2]
+{\item[] \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
-{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf +\hspace{-.20em}+}\ }
 
-% and the actual content starts here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% here be the resume
 \begin{document}
 
 \begin{center}
-%{\LARGE{\scshape \textbf{John Peter Stevenson}}} \\
 {\LARGE{ \textbf{JOHN PETER STEVENSON}}} \\
 \vspace{0.5em}
-%161 S. California Ave., \#K200\ \ \textbullet\ \ Palo Alto, CA 94306 \\
-%(640) 906-9549\ \ \textbullet \ \ etep.nosnevets@gmail.com
 \footnotesize{\textbf{161 S. CALIFORNIA AVE., APT. K200}}  \\
 \footnotesize{\textbf{PALO ALTO, CA 94306              }}  \\
-\footnotesize{{(650) 906-9549} // {etep.nosnevets@gmail.com}}
+\footnotesize{{(650) 906-9549} | {etep.nosnevets@gmail.com}}
 \end{center}
 
-\subsection*{\ EDUCATION}
+\begin{resumesection}{EDUCATION}
+    % Ph.D.
+    \headerrowx{ \textbf{Stanford University}, Ph.D. Electrical Engineering} {2008 -- 2013}
+    \begin{content}
+        \item[] Thesis: \emph{Fine-Grain In-Memory Deduplication for Large Scale Workloads}.
+        \item[] Faculty advisors: Mark Horowitz and David Cheriton.
+    \end{content}
+    
+    % M.S.
+    \headerrowx{ \textbf{Stanford University}, M.S. Electrical Engineering} {2000 -- 2002}
+    \begin{content}
+    	\item[] Focus Areas: Circuit Design and Semiconductor Physics.
+    \end{content}
+    
+    % B.S.
+    \headerrowx{ \textbf{U.S. Naval Academy}, B.S. Control Systems Engineering} {1996 -- 2000}
+    \begin{content}
+    	\item[] Graduated 1st in academic standing, degree conferred with distinction.
+    	\item[] Recipient of Ward Prize for best undergraduate research on multi-aperature camera arrays.
+    \end{content}
+\end{resumesection}
+
+\begin{resumesection}{EXPERIENCE}
+    \headerrowx{ \textbf{HICAMP Systems}, Member of Technical Staff} {2009 -- Present}
+    \begin{content}
+        \item[] Implemented world's first deduplicated DRAM memory system in FPGA logic.
+                Wrote Verilog RTL for high speed and high strength hash function.
+                Wrote SystemC and \CPP test infrastructure that automatically regenerates based on a high level graphical description of system protocol.
+                Code generation implemented in Python and graphical description implented in GraphViz.
+    \end{content}
+\end{resumesection}
+
+\subsection*{\ EXPERIENCE}
 \vspace{-0.4em}
 \hrule
 \vspace{ 0.4em}
@@ -89,6 +166,7 @@
 	\end{itemize*}
 
 \end{itemize}
+
 
 \hrule
 \vspace{-0.4em}
