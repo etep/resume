@@ -12,14 +12,9 @@ HTML = $(TARGET).html
 
 all: clean $(PDF)
 
-hicamp: clean wrapper_hicamp.pdf 
-	-killall Preview
-	sleep 1
-	open wrapper_hicamp.pdf
-
 html: clean $(HTML)
 
-%.pdf: %.tex #$(BIBFILE) # %.blg %.toc $(TEXFILES)
+%.pdf: %.tex
 	pdflatex -interaction=nonstopmode $*.tex
 	\rm -rf *.dvi *.aux *.ps *~ *.log *.out *.lot *.lof *.toc *.blg *.bbl url.sty nain.cb nain.cb2
 
@@ -30,12 +25,14 @@ clean:
 	\rm -rf $(PDF)
 	\rm -rf $(TARGET)
 	\rm -rf *.pdf
-	\rm -rf *.dvi *.aux *.ps *~ *.log *.out *.lot *.lof *.toc *.blg *.bbl url.sty nain.cb nain.cb2
+	\rm -rf *.dvi *.aux *.ps *~ *.log *.out *.lot *.lof *.toc *.blg *.bbl url.sty
 
+# linux?
 view:   
 	pdflatex $(TARGET).tex
 	acroread $(PDF)
 
+# mac
 open: all
 	-killall Preview
 	sleep 1
