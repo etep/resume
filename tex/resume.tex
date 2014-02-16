@@ -109,7 +109,7 @@
     % Ph.D.
     \headerrowx{ \textbf{Stanford University}, Ph.D. Electrical Engineering} {2008 -- 2013}
     \begin{content}
-        \item[] Thesis: \emph{Fine-Grain In-Memory Deduplication for Large Scale Workloads}.
+        \item[] Thesis: \emph{Fine-Grain In-Memory Deduplication for Large-Scale Workloads}.
         \item[] Faculty advisors: Mark Horowitz and David Cheriton.
     \end{content}
     
@@ -128,139 +128,116 @@
 \end{resumesection}
 
 \begin{resumesection}{EXPERIENCE}
-    \headerrowx{ \textbf{HICAMP Systems}, Member of Technical Staff} {2009 -- Present}
+    \headerrowx{ \textbf{HICAMP Systems}, Menlo Park, CA, Member of Technical Staff} {2009 -- Present}
     \begin{content}
         \item[] Implemented world's first deduplicated DRAM memory system in FPGA logic.
                 Wrote Verilog RTL for high speed and high strength hash function.
                 Wrote SystemC and \CPP test infrastructure that automatically regenerates based on a high level graphical description of system protocol.
                 Code generation implemented in Python and graphical description implented in GraphViz.
     \end{content}
+    \headerrowx{ \textbf{U.S. Naval Academy}, Annapolis, MD, Electrical Engineering Faculty} {2006 -- 2008}
+    \begin{content}
+        \item[] As an officer faculty member, taught undergraduate engineering major and core curriculum classes for 4 semesters.
+                Topics included circuit analysis, logic design, and wireless.
+    \end{content}
+    \headerrowx{ \textbf{Lawrence Livermore National Laboratory}, Livermore, CA, Photonics Group Intern} {2007}
+    \begin{content}
+        \item[] As a summer intern, characterized wavelength shift properties of a multiple section edge emitting laser system proposed for use as an optical logic gate.
+    \end{content}
+    \headerrowx{ \textbf{USS Los Angeles (SSN-688)}, Honolulu, HI, Officer} {2003 -- 2006}
+    \begin{content}
+        \item[] As Officer of the Deck, responsible for all operations submerged, surfaced, and in port, in lieu of the ship's Captain.
+                As Engineering Officer of the Watch, responsible for all nuclear power plant operations, in lieu of the ship's Engineer.
+                As Communications Officer and Mechanical Division Officer, supervised a shipboard division (~25 personnel).
+    \end{content}
+    \headerrowx{ \textbf{Honda Research}, Mountain View, CA, Computer Vision Intern} {2002}
+    \begin{content}
+        \item[] Investigated algorithms for depth recovery in non-stereoscopic images.
+    \end{content}
+    \headerrowx{ \textbf{Tensilica}, Sunnyvale, CA, Design Verification Intern} {2001}
+    \begin{content}
+        \item[] Wrote scripts to drive verification for customizeable RTL code.
+    \end{content}
 \end{resumesection}
 
-\subsection*{\ EXPERIENCE}
-\vspace{-0.4em}
-\hrule
-\vspace{ 0.4em}
-\begin{itemize}
-	\parskip=0.1em
+\begin{resumesection}{HONORS \& AWARDS}
+    \headerrowx{ \textbf{Best Paper at International Conference on Supercomputing}}        {2012}
+    \headerrowx{ \textbf{Best Student Project, Stanford MS\&E-273: Punch Mobile}}          {2011}
+    \headerrowx{ \textbf{David Cheriton Stanford Graduate Fellowship}}                     {2008}
+    \headerrowx{ \textbf{Stanford School of Engineering Fellowship}}                       {2000}
+    \headerrowx{ \textbf{Phi Kappa Phi National Honor Society Graduate Study Fellowship}}  {2000}
+    \headerrowx{ \textbf{Rhodes Scholarship State Finalist}}                               {1999}
+    \headerrowx{ \textbf{Eagle Scout}}                                                     {1996}
+\end{resumesection}
 
-	\item[]
-  \headerrow {\textbf{Stanford University}, Ph.D. Electrical Engineering} {2008 -- 2013}
-	\begin{itemize*}
-		\item[] Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-		\item[] Mirum est notare quam littera gothica, quam nunc putamus parum claram.
-	\end{itemize*}
+\begin{resumesection}{PROJECTS}
+    \headerrowx{ \textbf{Zest -- Memory Deduplicator for Linux}} {2012 -- Present}
+    \begin{content}
+        \item[] Using LiME, zest counts duplicates in DRAM memory.
+                Captures a snapshot of physical memory from a live instance of Linux.
+                Performs post-mortem fine-grain deduplication to show the benefit of deduplicated memory systems.
+                Shows that memory capacity is increased by over 2x in many common datacenter applications.
+        \item[] https://github.com/etep/zest
+    \end{content}
+    \headerrowx{ \textbf{The Stanford Circuit Optimization Tool (SCOT)}} {2008 -- Present}
+    \begin{content}
+        \item[] Provides optimal digital circuit design using convex optimization.
+                Integrates with industry standard tools such as SPICE.
+        \item[] http://code.google.com/p/thescot
+    \end{content}
+    \headerrowx{ \textbf{Punch Mobile}} {2011}
+    \begin{content}
+        \item[] Electronic payment processing with integrated consumer loyalty.
+                Provided significant cost savings by disintermediating the credit card payment network using a direct consumer-to-business (C2B) back-end.
+                Voted as top project in MS\&E-273 by VC panel.
+    \end{content}
+    \headerrowx{ \textbf{Solar Boat Project at U.S. Naval Academy -- Faculty Mentor}} {2006 -- 2008}
+    \begin{content}
+        \item[] Mentored a multidisciplinary team of undergraduates competing in the world championship of solar electric boating.
+    \end{content}
+    \headerrowx{ \textbf{SIMD Floating Point Adder Project -- Stanford Independent Projects in VLSI}} {2001}
+    \begin{content}
+        \item[] Designed and taped out a fully functional 1x32 / 2x16 bit SIMD floating point adder (IEEE compliant math).
+                Design was fabricated by TSMC in $\mathrm{0.5 \mu m}$ technology.
+    \end{content}
+\end{resumesection}
 
-	\item[]
-  \headerrow {\textbf{Stanford University}, M.S. Electrical Engineering} {2000 -- 2002}
-	\begin{itemize*}
-		\item[] Focus Areas: Circuit Design and Semiconductor Physics.
-		% \item[] Mirum est notare quam littera gothica, quam nunc putamus parum claram.
-	\end{itemize*}
+\begin{resumesection}{PUBLICATIONS}
+    \headerrowx{ \textbf{Sparse Matrix-Vector Multiply on the HICAMP Architecture}} {2012}
+    \begin{content}
+        \item[] J.P. Stevenson, A. Firoozshahian, A. Solomatnikov, M. Horowitz, and D. Cheriton, ICS 2012
+        \item[] Winner of Best Paper Award at International Conference on Supercomputing, 2012
+    \end{content}
+    \headerrowx{ \textbf{HICAMP: Architectural Support for Efficient Concurrency-Safe Shared Structured Data Access}} {2012}
+    \begin{content}
+        \item[] D. Cheriton, A. Firoozshahian, A. Solomatnikov, J.P. Stevenson, and O. Azizi, ASPLOS 2012
+    \end{content}
+    \headerrowx{ \textbf{CPU db: Recording Microprocessor History}} {2012}
+    \begin{content}
+        \item[] A. Danowitz, K. Kelley, J. Mao, J.P. Stevenson, and M. Horowitz, CACM 2012
+    \end{content}
+    \headerrowx{ \textbf{Intermediate Representations for Controllers in Chip Generators}} {2011}
+    \begin{content}
+        \item[] K. Kelley, M. Wachs, A. Danowitz, J.P. Stevenson, S. Richardson, M. Horowitz, DATE 2011
+    \end{content}
+    \headerrowx{ \textbf{An Integrated Framework for Co-Optimization of Architecture and Circuits}} {2010}
+    \begin{content}
+        \item[] O. Azizi, A. Mahesri, J.P. Stevenson, N. Zhou, S.J. Patel, and M. Horowitz, DATE 2010
+    \end{content}
+\end{resumesection}
 
-	\item[]
-  \headerrow {\textbf{U.S. Naval Academy}, B.S. Control Systems Engineering} {1996 -- 2000}
-	\begin{itemize*}
-		\item[] Graduated 1st in academic standing, degree conferred with distinction.
-		\item[] Recipient of Ward Prize for best undergraduate research on multi-aperature camera arrays.
-	\end{itemize*}
-
-\end{itemize}
-
-
-\hrule
-\vspace{-0.4em}
-\subsection*{Experience}
-
-\begin{itemize}
-	\parskip=0.1em
-
-	\item
-	\headerrow
-		{\textbf{Example Company One, LLC.}}
-		{\textbf{Chicago, IL}}
-	\\
-	\headerrow
-		{\emph{Software Developer \& Project Manager}}
-		{\emph{2004 -- 2010}}
-	\begin{itemize*}
-		\item { Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-		erat volutpat.}
-		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-		erat volutpat.
-		\item Nam liber tempor cum soluta nobis eleifend option congue nihil
-		imperdiet doming id quod mazim placerat facer possim assum. Typi non
-		habent claritatem insitam; est usus legentis in iis qui facit eorum
-		claritatem.
-		\item Investigationes demonstraverunt lectores legere me lius
-		quod ii legunt saepius. Claritas est etiam processus dynamicus, qui
-		sequitur mutationem consuetudium lectorum.
-		\item Mirum est notare quam littera gothica, quam nunc putamus parum
-		claram, anteposuerit litterarum formas humanitatis per seacula quarta
-		decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum
-		clari, fiant sollemnes in futurum.
-	\end{itemize*}
-
-	\item
-	\headerrow
-		{\textbf{Arch Linux}}
-		{\textbf{www.archlinux.org}}
-	\\
-	\headerrow
-		{\emph{Software Developer \& Contributing Community Member}}
-		{\emph{2006 -- Present}}
-	\begin{itemize*}
-		\item Ut wisi enim ad minim veniam, quis nostrud exerci tation
-		ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-		\item Duis splople autem vel eum iriure dolor in hendrerit in vulputate
-		velit esse molestie consequat, vel illum dolore eu feugiat nulla
-		facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-		praesent luptatum zzril delenit augue duis dolore te feugait nulla
-		facilisi.
-		\item Nam liber tempor cum soluta nobis eleifend option congue nihil
-		imperdiet doming id quod mazim placerat facer possim assum. Typi non
-		habent claritatem insitam; est usus legentis in iis qui facit eorum
-		claritatem.
-		\item Mirum est notare quam littera gothica, quam nunc putamus parum
-		claram, anteposuerit litterarum formas humanitatis per seacula quarta
-		decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum
-		clari, fiant sollemnes in futurum.
-	\end{itemize*}
-
-	\item
-	\headerrow
-		{\textbf{Example Company Two, Inc.}}
-		{\textbf{Chicago, IL}}
-	\\
-	\headerrow
-		{\emph{Software Consultant, Summer Intern}}
-		{\emph{1999 -- 2004}}
-	\begin{itemize*}
-		\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-		diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-		erat volutpat.
-		\item Ut wisi enim ad minim veniam, quis nostrud exerci tation
-		ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-		\item Nam liber tempor cum soluta nobis eleifend option congue nihil
-		imperdiet doming id quod mazim placerat facer possim assum. Typi non
-		habent claritatem insitam; est usus legentis in iis qui facit eorum
-		claritatem.
-	\end{itemize*}
-
-\end{itemize}
-
-\hrule
-\vspace{-0.4em}
-\subsection*{Core Technical Skills}
-
-\begin{indentsection}{\parindent}
-\hyphenpenalty=1000
-\begin{description*}
-	\item[Languages:]
-	C, \CPP, Java, JavaScript, \LaTeX, Perl, Python, shell script, SQL
-	\item[Open Source Contributions:]
-	Project A, Project B, Project C
-\end{description*}
-\end{indentsection}
+% -- original template -- \hrule
+% -- original template -- \vspace{-0.4em}
+% -- original template -- \subsection*{Core Technical Skills}
+% -- original template -- 
+% -- original template -- \begin{indentsection}{\parindent}
+% -- original template -- \hyphenpenalty=1000
+% -- original template -- \begin{description*}
+% -- original template -- 	\item[Languages:]
+% -- original template -- 	C, \CPP, Java, JavaScript, \LaTeX, Perl, Python, shell script, SQL
+% -- original template -- 	\item[Open Source Contributions:]
+% -- original template -- 	Project A, Project B, Project C
+% -- original template -- \end{description*}
+% -- original template -- \end{indentsection}
 
 \end{document}
