@@ -4,4 +4,5 @@ Resume for John Peter Stevenson
     cd resume/tex
     make # or make open
 
-<img src="./pdf/StevensonJohnPResume.pdf" alt="Drawing" style="width: 600px;"/>
+<a href="./pdf/StevensonJohnPResume.pdf"><img src="./png/StevensonJohnPResume-0.png" alt="Drawing" style="width: 600px;"/></a><br>
+<a href="./pdf/StevensonJohnPResume.pdf"><img src="./png/StevensonJohnPResume-1.png" alt="Drawing" style="width: 600px;"/></a><br>

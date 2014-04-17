@@ -12,7 +12,16 @@ HTML = $(TARGET).html
 
 all: clean $(PDF)
 
+png: clean $(PDF) $(TARGET)-0.png $(TARGET)-1.png
+
 html: clean $(HTML)
+
+%.png: %.jpg
+	mkdir -p ../png
+	convert -quality 100 -density 600x600 $< ../png/$@
+
+%.jpg: ../pdf/$(TARGET).pdf
+	convert -quality 100 -density 800x800 $< $(TARGET).jpg
 
 %.pdf: %.tex
 	mkdir -p ../pdf
@@ -25,7 +34,6 @@ html: clean $(HTML)
 
 clean:
 	\rm -rf ../pdf/$(PDF)
-	\rm -rf $(TARGET)
 	\rm -rf *.pdf
 	\rm -rf *.dvi *.aux *.ps *~ *.log *.out *.lot *.lof *.toc *.blg *.bbl url.sty
 
