@@ -4,3 +4,4 @@ Resume for John Peter Stevenson
     cd resume/tex
     make # or make open
 
+<img src="./pdf/StevensonJohnPResume.pdf" alt="Drawing" style="width: 600px;"/>
