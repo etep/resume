@@ -1,6 +1,6 @@
 ##
 
-TARGET = resume
+TARGET = StevensonJohnPResume
 
 # used for tex -> pdf generation
 TEXFILES = $(wildcard *.tex)
