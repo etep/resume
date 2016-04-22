@@ -1,9 +1,6 @@
 % resume.tex
 % vim:set ft=tex spell:
 %
-% garamond lives here (or did so as of this writing):
-% ... http://www.ctan.org/tex-archive/fonts/garamondx
-%
 \documentclass[10pt,letterpaper]{article}
 \usepackage[letterpaper,margin=0.75in]{geometry}
 % \usepackage[utf8]{inputenc}
@@ -116,14 +113,17 @@
 \footnotesize{\textbf{PALO ALTO, CA 94306              }}  \\
 \footnotesize{{(650) 906-9549} | {etep.nosnevets@gmail.com}}
 \end{center}
+% \noindent
 
+\begin{minipage}[t]{.4\textwidth}
 \begin{resumesection}{EDUCATION}
     % Ph.D.
-    \headerrowx{ \textbf{Stanford University}, Ph.D. Electrical Engineering} {2008 -- 2013}
-    \begin{content}
+    % \headerrowx{ \textbf{Stanford University}, Ph.D. Electrical Engineering} {2008 -- 2013}
+    \item[] \textbf{Stanford University}, Ph.D. Electrical Engineering 2008 -- 2013
+    %\begin{content}
         \item[] Thesis: \emph{Fine-Grain In-Memory Deduplication for Large-Scale Workloads}.
         \item[] Faculty advisors: Mark Horowitz and David Cheriton.
-    \end{content}
+    %\end{content}
     
     % M.S.
     \headerrowx{ \textbf{Stanford University}, M.S. Electrical Engineering} {2000 -- 2002}
@@ -139,6 +139,8 @@
     \end{content}
 \end{resumesection}
 
+\end{minipage}
+\begin{minipage}[t]{.6\textwidth}
 \begin{resumesection}{EXPERIENCE}
     \headerrowx{ \textbf{HICAMP Systems}, Menlo Park, CA, Member of Technical Staff} {2009 -- Present}
     \begin{content}
@@ -171,6 +173,8 @@
         \item[] Wrote scripts to drive verification for customizable RTL code.
     \end{content}
 \end{resumesection}
+
+\end{minipage}
 
 \begin{resumesection}{HONORS \& AWARDS}
     \headerrowx{ \textbf{Best Paper at International Conference on Supercomputing}}        {2012}
