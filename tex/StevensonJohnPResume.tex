@@ -23,7 +23,7 @@
 % * `regular`:       `\mdseries` is regular.
 % * `medium`:        `\mdseries` is medium.
 \usepackage[T1]{fontenc}
-\usepackage[default,osf,semibold,light]{raleway}
+\usepackage[default,osf,semibold,thin,light]{raleway}
 
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
@@ -77,7 +77,9 @@
 {%
     \subsection*{\ #1}
     \vspace{-0.4em}
+    \begin{samepage}
     \hrule
+    \end{samepage}
     \vspace{+0.4em}
     \begin{itemize}[leftmargin=0.15cm]
         \parskip=0.1em
@@ -100,7 +102,12 @@
 
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
-{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf +\hspace{-.20em}+}\ }
+{C++}
+%{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf +\hspace{-.20em}+}\ }
+
+\newcommand{\lminiw}{0.375}
+\newcommand{\cminiw}{0.075}
+\newcommand{\rminiw}{0.550}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,7 +115,7 @@
 \begin{document}
 
 \begin{center}
-{\LARGE{ \textbf{JOHN PETER STEVENSON}}} \\
+{\LARGE{ \textsc{\textbf{John Peter Stevenson}}}} \\
 \vspace{0.5em}
 \footnotesize{\textbf{161 S. CALIFORNIA AVE., APT. K200}}  \\
 \footnotesize{\textbf{PALO ALTO, CA 94306              }}  \\
@@ -117,34 +124,28 @@
 % \noindent
 
 % [t] aligns text to top
-\begin{minipage}[t]{.35\textwidth}
+\begin{minipage}[t]{\lminiw\textwidth}
 \begin{resumesection}{EDUCATION}
     % Ph.D.
     % \headerrowx{ \textbf{Stanford University}, Ph.D. Electrical Engineering} {2008 -- 2013}
     \headerrowx{\textbf{Stanford University}}{2008 -- 2014}
     
     Ph.D. Electrical Engineering
-    % \begin{content}
     \item[] Thesis: \emph{Fine-Grain In-Memory Deduplication for Large-Scale Workloads}.
-    \item[] Faculty advisors: Mark Horowitz and David Cheriton.
-    % \end{content}
+    % \item[] Faculty advisors: Mark Horowitz and David Cheriton.
     
     % M.S.
     \headerrowx{\textbf{Stanford University}}{2000 -- 2002}
     
     M.S. Electrical Engineering
-    % \begin{content}
     \item[] Focus Areas: Circuit Design and Semiconductor Physics.
-    % \end{content}
     
     % B.S.
     \headerrowx{\textbf{U.S. Naval Academy}}{1996 -- 2000}
     
     B.S. Control Systems Engineering
-    % \begin{content}
     \item[] Graduated 1st in academic standing, degree conferred with distinction.
-    \item[] Recipient of Ward Prize for best undergraduate research on multi-aperture camera arrays.
-    % \end{content}
+    % \item[] Recipient of Ward Prize for best undergraduate research on multi-aperture camera arrays.
 \end{resumesection}
 
 \begin{resumesection}{HONORS \& AWARDS}
@@ -152,44 +153,52 @@
     
     Sparse Matrix-Vector Multiply on the {{HICAMP}} Architecture, International Conference on Supercomputing
     
-    \headerrowx{\textbf{Best Student Project}}{2011}
+    \headerrowx{\textbf{Best Startup Project}}{2011}
     
     Stanford MS\&E-273: Punch Mobile
     
-    \headerrowx{\textbf{David Cheriton Fellow}}{2008}
+    \headerrowx{\textbf{David Cheriton Fellow}}{2008 -- 2014}
     
     Stanford Graduate Fellowship
     
-    \headerrowx{\textbf{SOE Fellow}}{2000}
+    \headerrowx{\textbf{SOE Fellow}}{2000 -- 2002}
     
     Stanford School of Engineering Fellowship
     
     \headerrowx{\textbf{Ward Prize}}{2000}
     
-    Best Undergraduate Research Project
+    Best undergraduate research for a multi-aperture camera array
     
     \headerrowx{\textbf{PKP NHS Fellow}}{2000}
     
     Phi Kappa Phi National Honor Society Graduate Study Fellowship
     
-    \headerrowx{\textbf{Rhodes Scholarship State Finalist}} {1999}
+    \headerrowx{\textbf{Rhodes Finalist}}{1999}
+    
+    State level interviewee
+    
     \headerrowx{\textbf{Eagle Scout}}                       {1996}
 \end{resumesection}
 
 \end{minipage}
-\begin{minipage}[t]{.05\textwidth}
+\begin{minipage}[t]{\cminiw\textwidth}
 \end{minipage}\hfill
-\begin{minipage}[t]{.55\textwidth}
+\begin{minipage}[t]{\rminiw\textwidth}
 \begin{resumesection}{EXPERIENCE}
-    \headerrowx{ \textbf{HICAMP Systems}}{2009 -- Present}
+    \headerrowx{ \textbf{Intel}}{2014 -- Present}
+    
+    Santa Clara, CA, Architect
+    \item[] Wrote performance simulator to validate advanced cache technology.
+            Drove effort for database acceleration technology.
+            \textit{!!fix me!!}
+    
+    \headerrowx{ \textbf{HICAMP Systems}}{2009 -- 2014}
     
     Menlo Park, CA, Member of Technical Staff
-    % \begin{content}
     \item[] Implemented world's first deduplicated DRAM memory system in FPGA logic.
             Wrote Verilog RTL for high speed and high strength hash function.
-            Wrote SystemC and \CPP test infrastructure that automatically regenerates based on a high level graphical description of system protocol.
+            Wrote SystemC and \CPP  test infrastructure that automatically regenerates based on a high level graphical description of system protocol.
             Code generation implemented in Python and graphical description implemented in GraphViz.
-    % \end{content}
     
     \headerrowx{ \textbf{U.S. Naval Academy}}{2006 -- 2008}
     
@@ -232,7 +241,7 @@
 
 \end{minipage}
 
-
+\newpage
 \begin{resumesection}{PROJECTS}
     \headerrowx{ \textbf{Zest -- Memory Deduplicator for Linux}} {2012 -- Present}
     \begin{content}
