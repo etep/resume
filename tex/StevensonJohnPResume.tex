@@ -122,11 +122,15 @@
 \begin{document}
 
 \begin{center}
-{\huge{ \textsc{ { {\fontfamily{salt}\selectfont John Peter} Stevenson}}}} \\
+% {\huge{ \textsc{ { {\fontfamily{salt}\selectfont John Peter} Stevenson}}}} \\
+% {\huge{ \textsc{ { {\textcolor{light-gray}{\mdseries John Peter}} {Stevenson} }}}} \\
+{\huge{ \textsc{ { {{\mdseries John Peter}} {Stevenson} }}}} \\
 \vspace{0.5em}
+\textcolor{light-gray}{
 \footnotesize{\textbf{161 S. CALIFORNIA AVE., APT. K200}}  \\
 \footnotesize{\textbf{PALO ALTO, CA 94306              }}  \\
 \footnotesize{{(650) 906-9549} | {etep.nosnevets@gmail.com}}
+}
 \end{center}
 % \noindent
 
@@ -249,73 +253,61 @@
 \end{minipage}
 
 \newpage
+
+\begin{minipage}[t]{\lminiw\textwidth}
+\begin{resumesection}{PUBLICATIONS}
+    \headerrowx{ \textbf{SITM}} {2014}
+    \item[] \textit{SI-TM: Reducing Transactional Memory Abort Rates through Snapshot Isolation}
+    \item[] H. Litz, D. Cheriton, A. Firoozshahian, O. Azizi, J.P. Stevenson, ASPLOS 2014
+    \headerrowx{ \textbf{SpMV on HICAMP}} {2012}
+    \item[] \textit{Sparse Matrix-Vector Multiply on the HICAMP Architecture}
+    \item[] J.P. Stevenson, A. Firoozshahian, A. Solomatnikov, M. Horowitz, and D. Cheriton, ICS 2012
+    \item[] Winner of Best Paper Award at International Conference on Supercomputing, 2012
+    \headerrowx{ \textbf{HICAMP}} {2012}
+    \item[] \textit{HICAMP: Architectural Support for Efficient Concurrency-Safe Shared Structured Data Access}
+    \item[] D. Cheriton, A. Firoozshahian, A. Solomatnikov, J.P. Stevenson, and O. Azizi, ASPLOS 2012
+    \headerrowx{ \textbf{CPU db}} {2012}
+    \item[] \textit{CPU db: Recording Microprocessor History}
+    \item[] A. Danowitz, K. Kelley, J. Mao, J.P. Stevenson, and M. Horowitz, CACM 2012
+    \headerrowx{ \textbf{IR for ChipGen}} {2011}
+    \item[] \textit{Intermediate Representations for Controllers in Chip Generators}
+    \item[] K. Kelley, M. Wachs, A. Danowitz, J.P. Stevenson, S. Richardson, M. Horowitz, DATE 2011
+    \headerrowx{ \textbf{CPU Co-Optimization}} {2010}
+    \item[] \textit{An Integrated Framework for Co-Optimization of Architecture and Circuits}
+    \item[] O. Azizi, A. Mahesri, J.P. Stevenson, N. Zhou, S.J. Patel, and M. Horowitz, DATE 2010
+\end{resumesection}
+\end{minipage}
+\begin{minipage}[t]{\cminiw\textwidth}
+\end{minipage}
+\begin{minipage}[t]{\rminiw\textwidth}
 \begin{resumesection}{PROJECTS}
     \headerrowx{ \textbf{Zest -- Memory Deduplicator for Linux}} {2012 -- Present}
-    \begin{content}
-        \item[] Using LiME, zest counts duplicates in DRAM memory.
-                Captures a snapshot of physical memory from a live instance of Linux.
-                Performs post-mortem fine-grain deduplication to show the benefit of deduplicated memory systems.
-                Shows that memory capacity is increased by over 2x in many common datacenter applications.
-        \item[] https://github.com/etep/zest
-    \end{content}
-    \headerrowx{ \textbf{Hash-Stats -- Overflow Statistics for Large Hash Tables}} {2014}
-    \begin{content}
-        \item[] Table utilization and table overflows are critical issues for large hash tables,
-                but these topics receive scant attention on the Wikipedia and from introductory CS course material.
-                This repository reduces theory to practice.
-                Using published theoretical results, it provides simple matlab scripts to guide the practicing engineer when implementing a large hash table.
-        \item[] https://github.com/etep/hash-stats
-    \end{content}
-    \headerrowx{ \textbf{The Stanford Circuit Optimization Tool (SCOT)}} {2008 -- Present}
-    \begin{content}
-        \item[] Provides optimal digital circuit design using convex optimization.
-                Integrates with industry standard tools such as SPICE.
-        \item[] http://github.com/etep/scot
-    \end{content}
+    \item[] Using LiME, zest counts duplicates in DRAM memory.
+            Captures a snapshot of physical memory from a live instance of Linux.
+            Performs post-mortem fine-grain deduplication to show the benefit of deduplicated memory systems.
+            Shows that memory capacity is increased by over 2x in many common datacenter applications.
+    \item[] https://github.com/etep/zest
+    \headerrowx{ \textbf{Hash-Stats}} {2014}
+    \item[] Overflow Statistics for Large Hash Tables
+    \item[] Table utilization and table overflows are critical issues for large hash tables,
+            but these topics receive scant attention on the Wikipedia and from introductory CS course material.
+            This repository reduces theory to practice.
+            Using published theoretical results, it provides simple matlab scripts to guide the practicing engineer when implementing a large hash table.
+    \item[] https://github.com/etep/hash-stats
+    \headerrowx{ \textbf{Stanford Circuit Optimization Tool}} {2008 -- Present}
+    \item[] Provides optimal digital circuit design using convex optimization.
+            Integrates with industry standard tools such as SPICE.
+    \item[] http://github.com/etep/scot
     \headerrowx{ \textbf{Punch Mobile}} {2011}
-    \begin{content}
-        \item[] Electronic payment processing with integrated consumer loyalty.
-                Provided significant cost savings by disintermediating the credit card payment network using a direct consumer-to-business (C2B) back-end.
-                Voted as top project in MS\&E-273 by VC panel.
-    \end{content}
+    \item[] Electronic payment processing with integrated consumer loyalty.
+            Provided significant cost savings by disintermediating the credit card payment network using a direct consumer-to-business (C2B) back-end.
+            Voted as top project in MS\&E-273 by VC panel.
     \headerrowx{ \textbf{Solar Boat Project at U.S. Naval Academy -- Faculty Mentor}} {2006 -- 2008}
-    \begin{content}
-        \item[] Mentored a multidisciplinary team of undergraduates competing in the world championship of solar electric boating.
-    \end{content}
+    \item[] Mentored a multidisciplinary team of undergraduates competing in the world championship of solar electric boating.
     \headerrowx{ \textbf{SIMD Floating Point Adder Project -- Stanford Independent Projects in VLSI}} {2001}
-    \begin{content}
-        \item[] Designed and taped out a fully functional 1x32 / 2x16 bit SIMD floating point adder (IEEE compliant math).
-                Design was fabricated by TSMC in $\mathrm{0.5 \mu m}$ technology.
-    \end{content}
+    \item[] Designed and taped out a fully functional 1x32 / 2x16 bit SIMD floating point adder (IEEE compliant math).
+            Design was fabricated by TSMC in $\mathrm{0.5 \mu m}$ technology.
 \end{resumesection}
-
-\begin{resumesection}{PUBLICATIONS}
-    \headerrowx{ \textbf{SI-TM: Reducing Transactional Memory Abort Rates through Snapshot Isolation}} {2014}
-    \begin{content}
-        \item[] H. Litz, D. Cheriton, A. Firoozshahian, O. Azizi, J.P. Stevenson, ASPLOS 2014
-    \end{content}
-    \headerrowx{ \textbf{Sparse Matrix-Vector Multiply on the HICAMP Architecture}} {2012}
-    \begin{content}
-        \item[] J.P. Stevenson, A. Firoozshahian, A. Solomatnikov, M. Horowitz, and D. Cheriton, ICS 2012
-        \item[] Winner of Best Paper Award at International Conference on Supercomputing, 2012
-    \end{content}
-    \headerrowx{ \textbf{HICAMP: Architectural Support for Efficient Concurrency-Safe Shared Structured Data Access}} {2012}
-    \begin{content}
-        \item[] D. Cheriton, A. Firoozshahian, A. Solomatnikov, J.P. Stevenson, and O. Azizi, ASPLOS 2012
-    \end{content}
-    \headerrowx{ \textbf{CPU db: Recording Microprocessor History}} {2012}
-    \begin{content}
-        \item[] A. Danowitz, K. Kelley, J. Mao, J.P. Stevenson, and M. Horowitz, CACM 2012
-    \end{content}
-    \headerrowx{ \textbf{Intermediate Representations for Controllers in Chip Generators}} {2011}
-    \begin{content}
-        \item[] K. Kelley, M. Wachs, A. Danowitz, J.P. Stevenson, S. Richardson, M. Horowitz, DATE 2011
-    \end{content}
-    \headerrowx{ \textbf{An Integrated Framework for Co-Optimization of Architecture and Circuits}} {2010}
-    \begin{content}
-        \item[] O. Azizi, A. Mahesri, J.P. Stevenson, N. Zhou, S.J. Patel, and M. Horowitz, DATE 2010
-    \end{content}
-\end{resumesection}
-
+\end{minipage}
 
 \end{document}
