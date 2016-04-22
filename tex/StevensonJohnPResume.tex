@@ -5,6 +5,7 @@
 \usepackage[letterpaper,margin=0.75in]{geometry}
 % \usepackage[utf8]{inputenc}
 \usepackage{mdwlist}
+\usepackage{enumitem}
 % \usepackage{textcomp}
 % \usepackage{tgpagella}
 % \usepackage{lmodern}
@@ -78,7 +79,7 @@
     \vspace{-0.4em}
     \hrule
     \vspace{+0.4em}
-    \begin{itemize}
+    \begin{itemize}[leftmargin=0.15cm]
         \parskip=0.1em
 }%
 {%
@@ -115,32 +116,68 @@
 \end{center}
 % \noindent
 
-\begin{minipage}[t]{.4\textwidth}
+% [t] aligns text to top
+\begin{minipage}[t]{.35\textwidth}
 \begin{resumesection}{EDUCATION}
     % Ph.D.
     % \headerrowx{ \textbf{Stanford University}, Ph.D. Electrical Engineering} {2008 -- 2013}
-    \item[] \textbf{Stanford University}, Ph.D. Electrical Engineering 2008 -- 2013
-    %\begin{content}
-        \item[] Thesis: \emph{Fine-Grain In-Memory Deduplication for Large-Scale Workloads}.
-        \item[] Faculty advisors: Mark Horowitz and David Cheriton.
-    %\end{content}
+    \headerrowx{\textbf{Stanford University}}{2008 -- 2014}
+    
+    Ph.D. Electrical Engineering
+    % \begin{content}
+    \item[] Thesis: \emph{Fine-Grain In-Memory Deduplication for Large-Scale Workloads}.
+    \item[] Faculty advisors: Mark Horowitz and David Cheriton.
+    % \end{content}
     
     % M.S.
-    \headerrowx{ \textbf{Stanford University}, M.S. Electrical Engineering} {2000 -- 2002}
-    \begin{content}
-    	\item[] Focus Areas: Circuit Design and Semiconductor Physics.
-    \end{content}
+    \headerrowx{\textbf{Stanford University}}{2000 -- 2002}
+    
+    M.S. Electrical Engineering
+    % \begin{content}
+    \item[] Focus Areas: Circuit Design and Semiconductor Physics.
+    % \end{content}
     
     % B.S.
-    \headerrowx{ \textbf{U.S. Naval Academy}, B.S. Control Systems Engineering} {1996 -- 2000}
-    \begin{content}
-    	\item[] Graduated 1st in academic standing, degree conferred with distinction.
-    	\item[] Recipient of Ward Prize for best undergraduate research on multi-aperture camera arrays.
-    \end{content}
+    \headerrowx{\textbf{U.S. Naval Academy}}{1996 -- 2000}
+    
+    B.S. Control Systems Engineering
+    % \begin{content}
+    \item[] Graduated 1st in academic standing, degree conferred with distinction.
+    \item[] Recipient of Ward Prize for best undergraduate research on multi-aperture camera arrays.
+    % \end{content}
+\end{resumesection}
+
+\begin{resumesection}{HONORS \& AWARDS}
+    \headerrowx{\textbf{Best Paper}}{2012}
+    
+    Sparse Matrix-Vector Multiply on the {{HICAMP}} Architecture, International Conference on Supercomputing
+    
+    \headerrowx{\textbf{Best Student Project}}{2011}
+    
+    Stanford MS\&E-273: Punch Mobile
+    
+    \headerrowx{\textbf{David Cheriton Fellow}}{2008}
+    
+    Stanford Graduate Fellowship
+    
+    \headerrowx{\textbf{SOE Fellow}}{2000}
+    
+    Stanford School of Engineering Fellowship
+    
+    \headerrowx{\textbf{Ward Prize}}{2000}
+    
+    Best Undergraduate Research Project
+    
+    \headerrowx{\textbf{PKP NHS Fellow}}{2000}
+    
+    Phi Kappa Phi National Honor Society Graduate Study Fellowship
+    
+    \headerrowx{\textbf{Rhodes Scholarship State Finalist}} {1999}
+    \headerrowx{\textbf{Eagle Scout}}                       {1996}
 \end{resumesection}
 
 \end{minipage}
-\begin{minipage}[t]{.6\textwidth}
+\begin{minipage}[t]{.5\textwidth}
 \begin{resumesection}{EXPERIENCE}
     \headerrowx{ \textbf{HICAMP Systems}, Menlo Park, CA, Member of Technical Staff} {2009 -- Present}
     \begin{content}
@@ -176,16 +213,6 @@
 
 \end{minipage}
 
-\begin{resumesection}{HONORS \& AWARDS}
-    \headerrowx{ \textbf{Best Paper at International Conference on Supercomputing}}        {2012}
-    \headerrowx{ \textbf{Best Student Project, Stanford MS\&E-273: Punch Mobile}}          {2011}
-    \headerrowx{ \textbf{David Cheriton Stanford Graduate Fellowship}}                     {2008}
-    \headerrowx{ \textbf{Stanford School of Engineering Fellowship}}                       {2000}
-    \headerrowx{ \textbf{Ward Prize: Best Undergraduate Research Project}}                 {2000}
-    \headerrowx{ \textbf{Phi Kappa Phi National Honor Society Graduate Study Fellowship}}  {2000}
-    \headerrowx{ \textbf{Rhodes Scholarship State Finalist}}                               {1999}
-    \headerrowx{ \textbf{Eagle Scout}}                                                     {1996}
-\end{resumesection}
 
 \begin{resumesection}{PROJECTS}
     \headerrowx{ \textbf{Zest -- Memory Deduplicator for Linux}} {2012 -- Present}
