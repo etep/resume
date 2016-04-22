@@ -3,12 +3,19 @@
 %
 \documentclass[10pt,letterpaper]{article}
 \usepackage[letterpaper,margin=0.75in]{geometry}
-% \usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{mdwlist}
 \usepackage{enumitem}
+\usepackage{titlesec}
+% \usepackage[utf8]{inputenc}
+% \usepackage{fontspec}
 % \usepackage{textcomp}
 % \usepackage{tgpagella}
 % \usepackage{lmodern}
+
+\definecolor{light-gray}{gray}{0.5}
+\titleformat*{\subsection}{\Large\mdseries}
 
 % * `oldstyle, osf`: use old style numbers.
 % * `lining, nf`:    use lining numbers.
@@ -23,7 +30,7 @@
 % * `regular`:       `\mdseries` is regular.
 % * `medium`:        `\mdseries` is medium.
 \usepackage[T1]{fontenc}
-\usepackage[default,osf,semibold,thin,light]{raleway}
+\usepackage[default,osf,semibold,light]{raleway}
 
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
@@ -75,7 +82,7 @@
 
 \newenvironment{resumesection}[1]
 {%
-    \subsection*{\ #1}
+    \subsection*{\ \textcolor{light-gray}{#1} }
     \vspace{-0.4em}
     \begin{samepage}
     \hrule
@@ -115,7 +122,7 @@
 \begin{document}
 
 \begin{center}
-{\LARGE{ \textsc{\textbf{John Peter Stevenson}}}} \\
+{\huge{ \textsc{ { {\fontfamily{salt}\selectfont John Peter} Stevenson}}}} \\
 \vspace{0.5em}
 \footnotesize{\textbf{161 S. CALIFORNIA AVE., APT. K200}}  \\
 \footnotesize{\textbf{PALO ALTO, CA 94306              }}  \\
