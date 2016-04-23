@@ -14,7 +14,8 @@
 % \usepackage{tgpagella}
 % \usepackage{lmodern}
 
-\definecolor{light-gray}{gray}{0.5}
+\definecolor{light-gray} {gray} {0.50}
+\definecolor{dark-gray}  {gray} {0.25}
 \titleformat*{\subsection}{\Large\mdseries}
 
 % * `oldstyle, osf`: use old style numbers.
@@ -88,12 +89,18 @@
     \hrule
     \end{samepage}
     \vspace{+0.4em}
+    %{
     \begin{itemize}[leftmargin=0.15cm]
         \parskip=0.1em
 }%
 {%
     \end{itemize}
+    %}}
 }%
+
+\newcommand{\myitem}[1]
+{\item[] \textcolor{dark-gray}{#1} }
+
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
@@ -106,6 +113,12 @@
 	#1 &
 	#2 \\
 \end{tabular*}}
+
+\newcommand{\headertri}[3]
+{\item[] \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+\textbf{#1} & #2 \\
+\end{tabular*}
+#3}
 
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
@@ -139,56 +152,71 @@
 \begin{resumesection}{EDUCATION}
     % Ph.D.
     % \headerrowx{ \textbf{Stanford University}, Ph.D. Electrical Engineering} {2008 -- 2013}
-    \headerrowx{\textbf{Stanford University}}{2008 -- 2014}
-    
-    Ph.D. Electrical Engineering
-    \item[] Thesis: \emph{Fine-Grain In-Memory Deduplication for Large-Scale Workloads}.
+    \headertri
+    {Stanford University}
+    {2008 -- 2014}
+    {Ph.D. Electrical Engineering}
+    \myitem
+    {Thesis: \textit{Fine-Grain In-Memory Deduplication for Large-Scale Workloads}}
     % \item[] Faculty advisors: Mark Horowitz and David Cheriton.
     
     % M.S.
-    \headerrowx{\textbf{Stanford University}}{2000 -- 2002}
-    
-    M.S. Electrical Engineering
-    \item[] Focus Areas: Circuit Design and Semiconductor Physics.
+    \headertri
+    {Stanford University}
+    {2000 -- 2002}
+    {M.S. Electrical Engineering}
+    \myitem
+    {With focus on circuit design and semiconductor physics}
     
     % B.S.
-    \headerrowx{\textbf{U.S. Naval Academy}}{1996 -- 2000}
-    
-    B.S. Control Systems Engineering
-    \item[] Graduated 1st in academic standing, degree conferred with distinction.
-    % \item[] Recipient of Ward Prize for best undergraduate research on multi-aperture camera arrays.
+    \headertri
+    {U.S. Naval Academy}
+    {1996 -- 2000}
+    {B.S. Control Systems Engineering}
+    \myitem
+    {Graduated 1st in academic standing \newline Degree conferred with distinction}
 \end{resumesection}
 
 \begin{resumesection}{HONORS \& AWARDS}
-    \headerrowx{\textbf{Best Paper}}{2012}
+    \headertri
+    {Best Paper}
+    {2012}
+    {Sparse Matrix-Vector Multiply on the {{HICAMP}} Architecture, International Conference on Supercomputing}
     
-    Sparse Matrix-Vector Multiply on the {{HICAMP}} Architecture, International Conference on Supercomputing
+    \headertri
+    {Best Startup Project}
+    {2011}
+    {Stanford MS\&E-273: Punch Mobile}
     
-    \headerrowx{\textbf{Best Startup Project}}{2011}
+    \headertri
+    {David Cheriton Fellow}
+    {2008 -- 2014}
+    {Stanford Graduate Fellowship}
     
-    Stanford MS\&E-273: Punch Mobile
+    \headertri
+    {SOE Fellow}
+    {2000 -- 2002}
+    {Stanford School of Engineering Fellowship}
     
-    \headerrowx{\textbf{David Cheriton Fellow}}{2008 -- 2014}
+    \headertri
+    {Ward Prize}
+    {2000}
+    {Best undergraduate research for a multi-aperture camera array}
     
-    Stanford Graduate Fellowship
+    \headertri
+    {PKP NHS Fellow}
+    {2000}
+    {Phi Kappa Phi National Honor Society Graduate Study Fellowship}
     
-    \headerrowx{\textbf{SOE Fellow}}{2000 -- 2002}
+    \headertri
+    {Rhodes Finalist}
+    {1999}
+    {State level interviewee}
     
-    Stanford School of Engineering Fellowship
-    
-    \headerrowx{\textbf{Ward Prize}}{2000}
-    
-    Best undergraduate research for a multi-aperture camera array
-    
-    \headerrowx{\textbf{PKP NHS Fellow}}{2000}
-    
-    Phi Kappa Phi National Honor Society Graduate Study Fellowship
-    
-    \headerrowx{\textbf{Rhodes Finalist}}{1999}
-    
-    State level interviewee
-    
-    \headerrowx{\textbf{Eagle Scout}}                       {1996}
+    \headertri
+    {Eagle Scout}
+    {1996}
+    {}
 \end{resumesection}
 
 \end{minipage}
@@ -199,55 +227,39 @@
     \headerrowx{ \textbf{Intel}}{2014 -- Present}
     
     Santa Clara, CA, Architect
-    \item[] Wrote performance simulator to validate advanced cache technology.
+    \myitem{Wrote performance simulator to validate advanced cache technology.
             Drove effort for database acceleration technology.
-            \textit{!!fix me!!}
+            \textit{!!fix me!!}}
     
-    \headerrowx{ \textbf{HICAMP Systems}}{2009 -- 2014}
-    
+    \headerrowx{ \textbf{HICAMP Systems}}{2009 -- 2014} \\
     Menlo Park, CA, Member of Technical Staff
-    \item[] Implemented world's first deduplicated DRAM memory system in FPGA logic.
+    \myitem{Implemented world's first deduplicated DRAM memory system in FPGA logic.
             Wrote Verilog RTL for high speed and high strength hash function.
             Wrote SystemC and \CPP  test infrastructure that automatically regenerates based on a high level graphical description of system protocol.
-            Code generation implemented in Python and graphical description implemented in GraphViz.
+            Code generation implemented in Python and graphical description implemented in GraphViz.}
     
-    \headerrowx{ \textbf{U.S. Naval Academy}}{2006 -- 2008}
-    
+    \headerrowx{ \textbf{U.S. Naval Academy}}{2006 -- 2008} \\
     Annapolis, MD, Electrical Engineering Faculty
-    % \begin{content}
-    \item[] As an officer faculty member, taught undergraduate engineering major and core curriculum classes for 4 semesters.
-            Topics included circuit analysis, logic design, and wireless.
-    % \end{content}
+    \myitem{As an officer faculty member, taught undergraduate engineering major and core curriculum classes for 4 semesters.
+            Topics included circuit analysis, logic design, and wireless.}
     
-    \headerrowx{ \textbf{Lawrence Livermore National Laboratory}}{2007}
-    
+    \headerrowx{ \textbf{Lawrence Livermore National Laboratory}}{2007} \\
     Livermore, CA, Photonics Group Intern
-    % \begin{content}
-    \item[] As a summer intern, characterized wavelength shift properties of a multiple section edge emitting laser system proposed for use as an optical logic gate.
-    % \end{content}
+    \myitem{As a summer intern, characterized wavelength shift properties of a multiple section edge emitting laser system proposed for use as an optical logic gate.}
     
-    \headerrowx{ \textbf{USS Los Angeles (SSN-688)}}{2003 -- 2006}
-    
+    \headerrowx{ \textbf{USS Los Angeles (SSN-688)}}{2003 -- 2006} \\
     Honolulu, HI, Officer
-    % \begin{content}
-    \item[] As Officer of the Deck, responsible for all operations submerged, surfaced, and in port, in lieu of the ship's Captain.
+    \myitem{As Officer of the Deck, responsible for all operations submerged, surfaced, and in port, in lieu of the ship's Captain.
             As Engineering Officer of the Watch, responsible for all nuclear power plant operations, in lieu of the ship's Engineer.
-            As Communications Officer and Mechanical Division Officer, supervised a shipboard division ({\footnotesize{$\sim$}}25 personnel).
-    % \end{content}
+            As Communications Officer and Mechanical Division Officer, supervised a shipboard division ({\footnotesize{$\sim$}}25 personnel).}
     
-    \headerrowx{ \textbf{Honda Research}}{2002}
-    
+    \headerrowx{ \textbf{Honda Research}}{2002} \\
     Mountain View, CA, Computer Vision Intern
-    % \begin{content}
-    \item[] Investigated algorithms for depth recovery in non-stereoscopic images.
-    % \end{content}
+    \myitem{Investigated algorithms for depth recovery in non-stereoscopic images.}
     
-    \headerrowx{ \textbf{Tensilica}}{2001}
-    
+    \headerrowx{ \textbf{Tensilica}}{2001} \\
     Sunnyvale, CA, Design Verification Intern
-    % \begin{content}
-    \item[] Wrote scripts to drive verification for customizable RTL code.
-    % \end{content}
+    \myitem{Wrote scripts to drive verification for customizable RTL code.}
 \end{resumesection}
 
 \end{minipage}
@@ -257,24 +269,24 @@
 \begin{minipage}[t]{\lminiw\textwidth}
 \begin{resumesection}{PUBLICATIONS}
     \headerrowx{ \textbf{SITM}} {2014}
-    \item[] \textit{SI-TM: Reducing Transactional Memory Abort Rates through Snapshot Isolation}
-    \item[] H. Litz, D. Cheriton, A. Firoozshahian, O. Azizi, J.P. Stevenson, ASPLOS 2014
+    \myitem{\textit{SI-TM: Reducing Transactional Memory Abort Rates through Snapshot Isolation}}
+    \myitem{H. Litz, D. Cheriton, A. Firoozshahian, O. Azizi, J.P. Stevenson, ASPLOS 2014}
     \headerrowx{ \textbf{SpMV on HICAMP}} {2012}
-    \item[] \textit{Sparse Matrix-Vector Multiply on the HICAMP Architecture}
-    \item[] J.P. Stevenson, A. Firoozshahian, A. Solomatnikov, M. Horowitz, and D. Cheriton, ICS 2012
-    \item[] Winner of Best Paper Award at International Conference on Supercomputing, 2012
+    \myitem{\textit{Sparse Matrix-Vector Multiply on the HICAMP Architecture}}
+    \myitem{J.P. Stevenson, A. Firoozshahian, A. Solomatnikov, M. Horowitz, and D. Cheriton, ICS 2012}
+    \myitem{Winner of Best Paper Award at International Conference on Supercomputing, 2012}
     \headerrowx{ \textbf{HICAMP}} {2012}
-    \item[] \textit{HICAMP: Architectural Support for Efficient Concurrency-Safe Shared Structured Data Access}
-    \item[] D. Cheriton, A. Firoozshahian, A. Solomatnikov, J.P. Stevenson, and O. Azizi, ASPLOS 2012
+    \myitem{\textit{HICAMP: Architectural Support for Efficient Concurrency-Safe Shared Structured Data Access}}
+    \myitem{D. Cheriton, A. Firoozshahian, A. Solomatnikov, J.P. Stevenson, and O. Azizi, ASPLOS 2012}
     \headerrowx{ \textbf{CPU db}} {2012}
-    \item[] \textit{CPU db: Recording Microprocessor History}
-    \item[] A. Danowitz, K. Kelley, J. Mao, J.P. Stevenson, and M. Horowitz, CACM 2012
+    \myitem{\textit{CPU db: Recording Microprocessor History}}
+    \myitem{A. Danowitz, K. Kelley, J. Mao, J.P. Stevenson, and M. Horowitz, CACM 2012}
     \headerrowx{ \textbf{IR for ChipGen}} {2011}
-    \item[] \textit{Intermediate Representations for Controllers in Chip Generators}
-    \item[] K. Kelley, M. Wachs, A. Danowitz, J.P. Stevenson, S. Richardson, M. Horowitz, DATE 2011
+    \myitem{\textit{Intermediate Representations for Controllers in Chip Generators}}
+    \myitem{K. Kelley, M. Wachs, A. Danowitz, J.P. Stevenson, S. Richardson, M. Horowitz, DATE 2011}
     \headerrowx{ \textbf{CPU Co-Optimization}} {2010}
-    \item[] \textit{An Integrated Framework for Co-Optimization of Architecture and Circuits}
-    \item[] O. Azizi, A. Mahesri, J.P. Stevenson, N. Zhou, S.J. Patel, and M. Horowitz, DATE 2010
+    \myitem{\textit{An Integrated Framework for Co-Optimization of Architecture and Circuits}}
+    \myitem{O. Azizi, A. Mahesri, J.P. Stevenson, N. Zhou, S.J. Patel, and M. Horowitz, DATE 2010}
 \end{resumesection}
 \end{minipage}
 \begin{minipage}[t]{\cminiw\textwidth}
@@ -282,31 +294,34 @@
 \begin{minipage}[t]{\rminiw\textwidth}
 \begin{resumesection}{PROJECTS}
     \headerrowx{ \textbf{Zest -- Memory Deduplicator for Linux}} {2012 -- Present}
-    \item[] Using LiME, zest counts duplicates in DRAM memory.
+    \myitem{Using LiME, zest counts duplicates in DRAM memory.
             Captures a snapshot of physical memory from a live instance of Linux.
             Performs post-mortem fine-grain deduplication to show the benefit of deduplicated memory systems.
-            Shows that memory capacity is increased by over 2x in many common datacenter applications.
-    \item[] https://github.com/etep/zest
+            Shows that memory capacity is increased by over 2x in many common datacenter applications.}
     \headerrowx{ \textbf{Hash-Stats}} {2014}
-    \item[] Overflow Statistics for Large Hash Tables
-    \item[] Table utilization and table overflows are critical issues for large hash tables,
+    \myitem{Overflow Statistics for Large Hash Tables}
+    \myitem{Table utilization and table overflows are critical issues for large hash tables,
             but these topics receive scant attention on the Wikipedia and from introductory CS course material.
             This repository reduces theory to practice.
-            Using published theoretical results, it provides simple matlab scripts to guide the practicing engineer when implementing a large hash table.
-    \item[] https://github.com/etep/hash-stats
+            Using published theoretical results, it provides simple matlab scripts to guide the practicing engineer when implementing a large hash table.}
+    \myitem{https://github.com/etep/hash-stats}
     \headerrowx{ \textbf{Stanford Circuit Optimization Tool}} {2008 -- Present}
-    \item[] Provides optimal digital circuit design using convex optimization.
-            Integrates with industry standard tools such as SPICE.
-    \item[] http://github.com/etep/scot
+    \myitem{Provides optimal digital circuit design using convex optimization.
+            Integrates with industry standard tools such as SPICE.}
+    \myitem{http://github.com/etep/scot}
     \headerrowx{ \textbf{Punch Mobile}} {2011}
-    \item[] Electronic payment processing with integrated consumer loyalty.
+    \myitem{Electronic payment processing with integrated consumer loyalty.
             Provided significant cost savings by disintermediating the credit card payment network using a direct consumer-to-business (C2B) back-end.
-            Voted as top project in MS\&E-273 by VC panel.
-    \headerrowx{ \textbf{Solar Boat Project at U.S. Naval Academy -- Faculty Mentor}} {2006 -- 2008}
-    \item[] Mentored a multidisciplinary team of undergraduates competing in the world championship of solar electric boating.
-    \headerrowx{ \textbf{SIMD Floating Point Adder Project -- Stanford Independent Projects in VLSI}} {2001}
-    \item[] Designed and taped out a fully functional 1x32 / 2x16 bit SIMD floating point adder (IEEE compliant math).
-            Design was fabricated by TSMC in $\mathrm{0.5 \mu m}$ technology.
+            Voted as top project in MS\&E-273 by VC panel.}
+    \headerrowx{ \textbf{Faculty Mentor for Solar Boat}} {2006 -- 2008}
+    \myitem{As an officer faculty member at the U.S. Naval Academy,
+            mentored a multidisciplinary team of undergraduates
+            competing in the world championship of solar electric boating.}
+    \headerrowx{ \textbf{SIMD Floating Point Adder}} {2001}
+    \myitem{Designed and taped out a fully functional 1x32 / 2x16 bit
+            SIMD floating point adder with IEEE compliant rounding
+            for Stanford independent projects in VLSI, EE-271.
+            Silicon fabricated by TSMC in 0.5$\mathrm{ \mu m}$ technology.}
 \end{resumesection}
 \end{minipage}
 
